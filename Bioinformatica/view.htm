@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="es" xml:lang="es">
+<head>
+    <title>0431309-24: Metodos y Funciones | UAX</title>
+    <link rel="shortcut icon" href="https://campus.uax.es/moodle/pluginfile.php/1/theme_moove/favicon/1727327853/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, 0431309-24: Metodos y Funciones | UAX" />
+<link rel="stylesheet" type="text/css" href="https://campus.uax.es/moodle/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://campus.uax.es/moodle/theme/styles.php/moove/1727327853_1722755836/all" />
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/campus.uax.es\/moodle","homeurl":{},"sesskey":"U40m8DLCVU","sessiontimeout":"10800","sessiontimeoutwarning":"1200","themerev":"1727327853","slasharguments":1,"theme":"moove","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1727327853","admin":"admin","svgicons":true,"usertimezone":"Europa\/Madrid","language":"es","courseId":14032,"courseContextId":1796966,"contextid":2137468,"contextInstanceId":1139423,"langrev":1727343315,"templaterev":"1727327853"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/campus.uax.es\/moodle\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/campus.uax.es\/moodle\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/campus.uax.es\/moodle\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/campus.uax.es\/moodle\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/campus.uax.es\/moodle\/theme\/yui_combo.php?m\/1727327853\/","combine":true,"comboBase":"https:\/\/campus.uax.es\/moodle\/theme\/yui_combo.php?","ext":false,"root":"m\/1727327853\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-event":{"requires":["event-custom"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_ipaddress-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_password-form":{"requires":["base","node","event","event-valuechange","moodle-core_availability-form"]},"moodle-availability_password-popup":{"requires":["base","node","event","moodle-core-notification-dialogue","io-base"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_offlinequiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_offlinequiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_offlinequiz-offlinequizbase","moodle-mod_offlinequiz-util-base","moodle-mod_offlinequiz-util-page","moodle-mod_offlinequiz-util-slot","moodle-course-util"]},"moodle-mod_offlinequiz-modform":{"requires":["base","node","event"]},"moodle-mod_offlinequiz-offlinequizbase":{"requires":["base","node"]},"moodle-mod_offlinequiz-offlinequizquestionbank":{"requires":["base","event","node","io","io-form","yui-later","moodle-question-qbankmanager","moodle-qbank_editquestion-chooser","moodle-question-searchform","moodle-core-notification"]},"moodle-mod_offlinequiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_offlinequiz-util","querystring-parse"]},"moodle-mod_offlinequiz-randomquestion":{"requires":["base","event","node","io","moodle-core-notification-dialogue"]},"moodle-mod_offlinequiz-repaginate":{"requires":["base","event","node","io","moodle-core-notification-dialogue"]},"moodle-mod_offlinequiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_offlinequiz-offlinequizbase","moodle-mod_offlinequiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_offlinequiz-util":{"requires":["node"],"use":["moodle-mod_offlinequiz-util-base"],"submodules":{"moodle-mod_offlinequiz-util-base":{},"moodle-mod_offlinequiz-util-slot":{"requires":["node","moodle-mod_offlinequiz-util-base"]},"moodle-mod_offlinequiz-util-page":{"requires":["node","moodle-mod_offlinequiz-util-base"]}}},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_c4l-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_html-beautify":{},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wiris-button":{"requires":["moodle-editor_atto-plugin","get"]}}},"gallery":{"name":"gallery","base":"https:\/\/campus.uax.es\/moodle\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/campus.uax.es\/moodle\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1727327853\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/campus.uax.es\/moodle\/lib\/javascript.php\/1727327853\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/campus.uax.es\/moodle\/lib\/javascript.php\/1727327853\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.9\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<meta name="robots" content="noindex" /><link rel="preconnect" href="https://fonts.googleapis.com">
+                       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                       <link href="https://fonts.googleapis.com/css2?family=Manrope:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body  id="page-mod-resource-view" class="format-tiles  path-mod path-mod-resource chrome dir-ltr lang-es yui-skin-sam yui3-skin-sam campus-uax-es--moodle pagelayout-incourse course-14032 context-2137468 cmid-1139423 cm-type-resource category-1 uses-drawers">
+<div id="accessibilitybar" class="fixed-top">
+    <div class="container-fluid">
+        <div class="bars">
+            <div class="fontsize">
+                <span>Tamaño de fuente</span>
+                <ul>
+                    <li><a class="btn btn-default" data-action="decrease" title="Disminuir tamaño de letras" id="fontsize_dec">A-</a></li>
+                    <li><a class="btn btn-default" data-action="reset" title="Reiniciar tamaño de letras" id="fontsize_reset">A</a></li>
+                    <li><a class="btn btn-default" data-action="increase" title="Disminuir tamaño de letras" id="fontsize_inc">A+</a></li>
+                </ul>
+            </div>
+            <div class="sitecolor">
+                <span>Color del sitio</span>
+                <ul>
+                    <li><a class="btn btn-default" data-action="reset" title="Reiniciar color del sitio" id="sitecolor_color1">R</a></li>
+                    <li><a class="btn btn-default" data-action="sitecolor-color-2" title="Bajo contraste 1" id="sitecolor_color2">A</a></li>
+                    <li><a class="btn btn-default" data-action="sitecolor-color-3" title="Bajo contraste 2" id="sitecolor_color3">A</a></li>
+                    <li><a class="btn btn-default" data-action="sitecolor-color-4" title="Alto contraste" id="sitecolor_color4">A</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+<div id="page-wrapper" class="d-print-block">
+
+    <div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Salta al contenido principal</a>
+</div><script src="https://campus.uax.es/moodle/lib/javascript.php/1727327853/lib/polyfills/polyfill.js"></script>
+<script src="https://campus.uax.es/moodle/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://campus.uax.es/moodle/lib/javascript.php/1727327853/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+
+    <nav class="navbar fixed-top navbar-light bg-white navbar-expand shadow" aria-label="Navegación del sitio">
+    
+        <button class="navbar-toggler aabtn d-block d-md-none px-1 my-1 border-0" data-toggler="drawers" data-action="toggle" data-target="theme_moove-drawers-primary">
+            <span class="navbar-toggler-icon"></span>
+            <span class="sr-only">Panel lateral</span>
+        </button>
+    
+        <a href="https://campus.uax.es/moodle/my/courses.php" class="navbar-brand d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
+                <img src="//campus.uax.es/moodle/pluginfile.php/1/theme_moove/logo/1727327853/logo_uax.png" class="logo mr-1" alt="UAX">
+        </a>
+    
+            <div class="primary-navigation">
+                <nav class="moremenu navigation">
+                    <ul id="moremenu-66faac7a42888-navbar-nav" role="menubar" class="nav more-nav navbar-nav">
+                                <li data-key="home" class="nav-item" role="none" data-forceintomoremenu="false">
+                                            <a role="menuitem" class="nav-link  "
+                                                href="https://campus.uax.es/moodle/?redirect=0"
+                                                
+                                                
+                                                tabindex="-1"
+                                            >
+                                                Inicio
+                                            </a>
+                                </li>
+                                <li data-key="myhome" class="nav-item" role="none" data-forceintomoremenu="false">
+                                            <a role="menuitem" class="nav-link  "
+                                                href="https://campus.uax.es/moodle/my/"
+                                                
+                                                
+                                                tabindex="-1"
+                                            >
+                                                Área personal
+                                            </a>
+                                </li>
+                                <li data-key="mycourses" class="nav-item" role="none" data-forceintomoremenu="false">
+                                            <a role="menuitem" class="nav-link  "
+                                                href="https://campus.uax.es/moodle/my/courses.php"
+                                                
+                                                
+                                                tabindex="-1"
+                                            >
+                                                Mis asignaturas
+                                            </a>
+                                </li>
+                        <li role="none" class="nav-item dropdown dropdownmoremenu d-none" data-region="morebutton">
+                            <a class="dropdown-toggle nav-link " href="#" id="moremenu-dropdown-66faac7a42888" role="menuitem" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="-1">
+                                Más
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-left" data-region="moredropdown" aria-labelledby="moremenu-dropdown-66faac7a42888" role="menu">
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+    
+        <ul class="navbar-nav d-none d-md-flex my-1 px-1">
+            <!-- page_heading_menu -->
+            
+        </ul>
+    
+        <div id="usernavigation" class="navbar-nav ml-auto">
+            <div class="navbarcallbacks">
+                
+            </div>
+            <div class="popover-region collapsed popover-region-notifications"
+    id="nav-notification-popover-container" data-userid="69037"
+    data-region="popover-region">
+    <div class="popover-region-toggle nav-link icon-no-margin"
+        data-region="popover-region-toggle"
+        role="button"
+        aria-controls="popover-region-container-66faac7a43f3566faac7a40c4f6"
+        aria-haspopup="true"
+        aria-label=" Mostrar la ventana de notificaciones cuando no hay ninguna   "
+        tabindex="0">
+                <i class="icon fa fa-bell-o fa-fw "  title="Mostrar/ocultar menú de notificaciones" role="img" aria-label="Mostrar/ocultar menú de notificaciones"></i>
+        <div
+            class="count-container hidden"
+            data-region="count-container"
+            aria-hidden=true
+        >
+            0
+        </div>
+
+    </div>
+    <div 
+        id="popover-region-container-66faac7a43f3566faac7a40c4f6"
+        class="popover-region-container"
+        data-region="popover-region-container"
+        aria-expanded="false"
+        aria-hidden="true"
+        aria-label="Ventana de notificación"
+        role="region">
+        <div class="popover-region-header-container">
+            <h3 class="popover-region-header-text" data-region="popover-region-header-text">Notificaciones</h3>
+            <div class="popover-region-header-actions" data-region="popover-region-header-actions">        <a class="mark-all-read-button"
+           href="#"
+           title="Marcar como leído"
+           data-action="mark-all-read"
+           role="button"
+           aria-label="Marcar como leído">
+            <span class="normal-icon"><i class="icon fa fa-check fa-fw " aria-hidden="true"  ></i></span>
+            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Cargando" role="img" aria-label="Cargando"></i></span>
+        </a>
+            <a href="https://campus.uax.es/moodle/message/notificationpreferences.php"
+               title="Preferencias de notificación"
+               aria-label="Preferencias de notificación">
+                <i class="icon fa fa-cog fa-fw " aria-hidden="true"  ></i></a>
+</div>
+        </div>
+        <div class="popover-region-content-container" data-region="popover-region-content-container">
+            <div class="popover-region-content" data-region="popover-region-content">
+                        <div class="all-notifications"
+            data-region="all-notifications"
+            role="log"
+            aria-busy="false"
+            aria-atomic="false"
+            aria-relevant="additions"></div>
+        <div class="empty-message" tabindex="0" data-region="empty-message">No tienes notificaciones</div>
+
+            </div>
+            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Cargando" role="img" aria-label="Cargando"></i></span>
+        </div>
+                <a class="see-all-link"
+                    href="https://campus.uax.es/moodle/message/output/popup/notifications.php">
+                    <div class="popover-region-footer-container">
+                        <div class="popover-region-seeall-text">Ver todo</div>
+                    </div>
+                </a>
+    </div>
+</div><div class="popover-region collapsed popover-region-mail"
+            id="nav-mail-popover-container"
+
+    data-region="popover-region">
+    <div class="popover-region-toggle nav-link icon-no-margin"
+        data-region="popover-region-toggle"
+        role="button"
+        aria-controls="popover-region-container-66faac7a4507366faac7a40c4f7"
+        aria-haspopup="true"
+        aria-label="Muestra/oculta el menú del correo"
+        tabindex="0">
+                <i class="icon fa fa-envelope fa-fw "  title="Muestra/oculta el menú del correo" role="img" aria-label="Muestra/oculta el menú del correo"></i>
+
+    </div>
+    <div 
+        id="popover-region-container-66faac7a4507366faac7a40c4f7"
+        class="popover-region-container"
+        data-region="popover-region-container"
+        aria-expanded="false"
+        aria-hidden="true"
+        aria-label="Menú del correo"
+        role="region">
+        <div class="popover-region-header-container">
+            <h3 class="popover-region-header-text" data-region="popover-region-header-text">Correo</h3>
+            <div class="popover-region-header-actions" data-region="popover-region-header-actions">        <a href="https://campus.uax.es/moodle/local/mail/create.php?c=14032&amp;sesskey=U40m8DLCVU" class="mail-navbar-menu-compose-link">
+            Redactar
+        </a>
+        <a href="https://campus.uax.es/moodle/local/mail/preferences.php" title="Preferencias">
+            <i class="icon fa fa-cog fa-fw "  title="Preferencias" role="img" aria-label="Preferencias"></i>
+        </a>
+</div>
+        </div>
+        <div class="popover-region-content-container" data-region="popover-region-content-container">
+            <div class="popover-region-content" data-region="popover-region-content">
+                        <div class="mail-navbar-menu">
+            <a href="https://campus.uax.es/moodle/local/mail/view.php?t=inbox" 
+                class="mail-navbar-menu-item
+                    
+                    ">
+                
+                
+                <i class="icon fa fa-inbox fa-fw " aria-hidden="true"  ></i>
+                Bandeja de entrada
+            </a>
+            <a href="https://campus.uax.es/moodle/local/mail/view.php?t=starred" 
+                class="mail-navbar-menu-item
+                    
+                    ">
+                
+                
+                <i class="icon fa fa-star fa-fw " aria-hidden="true"  ></i>
+                Destacado
+            </a>
+            <a href="https://campus.uax.es/moodle/local/mail/view.php?t=drafts" 
+                class="mail-navbar-menu-item
+                    
+                    ">
+                
+                <span class="badge">12</span>
+                <i class="icon fa fa-file fa-fw " aria-hidden="true"  ></i>
+                Borradores
+            </a>
+            <a href="https://campus.uax.es/moodle/local/mail/view.php?t=sent" 
+                class="mail-navbar-menu-item
+                    
+                    ">
+                
+                
+                <i class="icon fa fa-paper-plane fa-fw " aria-hidden="true"  ></i>
+                Enviados
+            </a>
+            <a href="https://campus.uax.es/moodle/local/mail/view.php?t=trash" 
+                class="mail-navbar-menu-item
+                    
+                    ">
+                
+                
+                <i class="icon fa fa-trash fa-fw " aria-hidden="true"  ></i>
+                Papelera
+            </a>
+            <a href="https://campus.uax.es/moodle/local/mail/view.php?t=course&amp;c=14074" title="Advances in cancer and aging diseases diagnosis and treatment [24/25]"
+                class="mail-navbar-menu-item
+                    
+                    ">
+                
+                
+                <i class="icon fa fa-university fa-fw " aria-hidden="true"  ></i>
+                0431310-24
+            </a>
+            <a href="https://campus.uax.es/moodle/local/mail/view.php?t=course&amp;c=13612" title="Avances en diagnóstico y tratamiento de enfermedades del sistema cardiovascular [24/25]"
+                class="mail-navbar-menu-item
+                    
+                    ">
+                
+                
+                <i class="icon fa fa-university fa-fw " aria-hidden="true"  ></i>
+                0431300-24
+            </a>
+            <a href="https://campus.uax.es/moodle/local/mail/view.php?t=course&amp;c=13707" title="Avances en diagnóstico y tratamiento de enfermedades del sistema nervioso [24/25]"
+                class="mail-navbar-menu-item
+                    
+                    ">
+                
+                
+                <i class="icon fa fa-university fa-fw " aria-hidden="true"  ></i>
+                0431301-24
+            </a>
+            <a href="https://campus.uax.es/moodle/local/mail/view.php?t=course&amp;c=5259" title="Ayuda Campus Virtual (estudiantes)"
+                class="mail-navbar-menu-item
+                    
+                    ">
+                
+                
+                <i class="icon fa fa-university fa-fw " aria-hidden="true"  ></i>
+                {E}AYU001
+            </a>
+            <a href="https://campus.uax.es/moodle/local/mail/view.php?t=course&amp;c=14032" title="Bioinformática [24/25]"
+                class="mail-navbar-menu-item
+                    
+                    ">
+                
+                
+                <i class="icon fa fa-university fa-fw " aria-hidden="true"  ></i>
+                0431309-24
+            </a>
+            <a href="https://campus.uax.es/moodle/local/mail/view.php?t=course&amp;c=13471" title="Biología regenerativa y del envejecimiento [24/25]"
+                class="mail-navbar-menu-item
+                    
+                    ">
+                
+                
+                <i class="icon fa fa-university fa-fw " aria-hidden="true"  ></i>
+                0431332-24
+            </a>
+            <a href="https://campus.uax.es/moodle/local/mail/view.php?t=course&amp;c=13922" title="Biomedicina forense [24/25]"
+                class="mail-navbar-menu-item
+                    
+                    ">
+                
+                
+                <i class="icon fa fa-university fa-fw " aria-hidden="true"  ></i>
+                0431333-24
+            </a>
+            <a href="https://campus.uax.es/moodle/local/mail/view.php?t=course&amp;c=14227" title="Ciencia de datos [24/25]"
+                class="mail-navbar-menu-item
+                    
+                    ">
+                
+                
+                <i class="icon fa fa-university fa-fw " aria-hidden="true"  ></i>
+                0431304-24
+            </a>
+            <a href="https://campus.uax.es/moodle/local/mail/view.php?t=course&amp;c=6139" title="Comunicados UAX"
+                class="mail-navbar-menu-item
+                    
+                    ">
+                
+                
+                <i class="icon fa fa-university fa-fw " aria-hidden="true"  ></i>
+                COMUNICAUAX
+            </a>
+            <a href="https://campus.uax.es/moodle/local/mail/view.php?t=course&amp;c=14002" title="Diagnóstico biológico [24/25]"
+                class="mail-navbar-menu-item
+                    
+                    ">
+                
+                
+                <i class="icon fa fa-university fa-fw " aria-hidden="true"  ></i>
+                0431311-24
+            </a>
+            <a href="https://campus.uax.es/moodle/local/mail/view.php?t=course&amp;c=13399" title="Epidemiología y medicina preventiva [24/25]"
+                class="mail-navbar-menu-item
+                    
+                    ">
+                
+                
+                <i class="icon fa fa-university fa-fw " aria-hidden="true"  ></i>
+                0431306-24
+            </a>
+            <a href="https://campus.uax.es/moodle/local/mail/view.php?t=course&amp;c=9162" title="Formación de Biblioteca 2022-23"
+                class="mail-navbar-menu-item
+                    
+                    ">
+                
+                
+                <i class="icon fa fa-university fa-fw " aria-hidden="true"  ></i>
+                {D}BIBFOR22
+            </a>
+            <a href="https://campus.uax.es/moodle/local/mail/view.php?t=course&amp;c=12691" title="GBME. Tramitación de prácticas 2024-25"
+                class="mail-navbar-menu-item
+                    
+                    ">
+                
+                
+                <i class="icon fa fa-university fa-fw " aria-hidden="true"  ></i>
+                {D}GBME-PE24
+            </a>
+            <a href="https://campus.uax.es/moodle/local/mail/view.php?t=course&amp;c=6612" title="Jefatura de Estudios. Grado en Biomedicina"
+                class="mail-navbar-menu-item
+                    
+                    ">
+                
+                
+                <i class="icon fa fa-university fa-fw " aria-hidden="true"  ></i>
+                {0}GBME
+            </a>
+            <a href="https://campus.uax.es/moodle/local/mail/view.php?t=course&amp;c=13418" title="Prácticas externas [24/25]"
+                class="mail-navbar-menu-item
+                    
+                    ">
+                
+                
+                <i class="icon fa fa-university fa-fw " aria-hidden="true"  ></i>
+                0431307-24
+            </a>
+            <a href="https://campus.uax.es/moodle/local/mail/view.php?t=course&amp;c=6224" title="SEMINARIOS GABINETE PSICOPEDAGÓGICO"
+                class="mail-navbar-menu-item
+                    
+                    ">
+                
+                
+                <i class="icon fa fa-university fa-fw " aria-hidden="true"  ></i>
+                {E}AYU_GPS
+            </a>
+            <a href="https://campus.uax.es/moodle/local/mail/view.php?t=course&amp;c=13368" title="Trabajo Fin de Grado [24/25]"
+                class="mail-navbar-menu-item
+                    
+                    ">
+                
+                
+                <i class="icon fa fa-university fa-fw " aria-hidden="true"  ></i>
+                0431308-24
+            </a>
+            <a href="https://campus.uax.es/moodle/local/mail/view.php?t=course&amp;c=7713" title="Tutoría Isabel Olazabal Olarreaga"
+                class="mail-navbar-menu-item
+                    
+                    ">
+                
+                
+                <i class="icon fa fa-university fa-fw " aria-hidden="true"  ></i>
+                {D}T993797
+            </a>
+            <a href="https://campus.uax.es/moodle/local/mail/view.php?t=course&amp;c=11197" title="Tutoría Marta Cedenilla Horcajuelo"
+                class="mail-navbar-menu-item
+                    
+                    ">
+                
+                
+                <i class="icon fa fa-university fa-fw " aria-hidden="true"  ></i>
+                {D}T720251
+            </a>
+        </div>
+
+            </div>
+            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Cargando" role="img" aria-label="Cargando"></i></span>
+        </div>
+    </div>
+</div>
+            <div class="d-flex align-items-stretch usermenu-container" data-region="usermenu">
+                    <div class="usermenu">
+                            <div class="dropdown show">
+                                <a href="#" role="button" id="user-menu-toggle" data-toggle="dropdown" aria-label="Menú de usuario"
+                                   aria-haspopup="true" aria-controls="user-action-menu" class="btn dropdown-toggle">
+                                    <span class="userbutton">
+                                        <span class="avatars">
+                                                <span class="avatar current">
+                                                    <img src="https://campus.uax.es/moodle/pluginfile.php/747719/user/icon/moove/f2?rev=7337786" class="userpicture" width="35" height="35" alt="" />
+                                                </span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <div id="user-action-menu" class="dropdown-menu dropdown-menu-right">
+                                    <div id="usermenu-carousel" class="carousel slide" data-touch="false" data-interval="false" data-keyboard="false">
+                                        <div class="carousel-inner">
+                                            <div id="carousel-item-main" class="carousel-item active" role="menu" tabindex="-1" aria-label="Usuario">
+                                                <a id="accessibilitysettings-control" href="#" class="dropdown-item" role="menuitem" tabindex="-1" aria-label="Accesibilidad">
+                                                    Accesibilidad
+                                                </a>
+                    
+                                                <div class="dropdown-divider"></div>
+                    
+                                                        <a href="https://campus.uax.es/moodle/user/profile.php" class="dropdown-item" role="menuitem" tabindex="-1">
+                                                                
+                                                            Perfil
+                                                        </a>
+                                                    
+                                                        <a href="https://campus.uax.es/moodle/local/mail/view.php?t=inbox" class="dropdown-item" role="menuitem" tabindex="-1">
+                                                                
+                                                            Mensajes
+                                                        </a>
+                                                    
+                                                        <a href="https://campus.uax.es/moodle/calendar/view.php?view=month" class="dropdown-item" role="menuitem" tabindex="-1">
+                                                                
+                                                            Calendario
+                                                        </a>
+                                                    
+                                                    <div class="dropdown-divider"></div>
+                                                        <a href="https://campus.uax.es/moodle/user/preferences.php" class="dropdown-item" role="menuitem" tabindex="-1">
+                                                                
+                                                            Preferencias
+                                                        </a>
+                                                    <div class="dropdown-divider"></div>
+                                                        <a href="https://campus.uax.es/moodle/login/logout.php?sesskey=U40m8DLCVU" class="dropdown-item" role="menuitem" tabindex="-1">
+                                                                
+                                                            Cerrar sesión
+                                                        </a>
+                                                    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+            </div>
+            
+        </div>
+    </nav>
+    
+    
+
+<div  class="drawer drawer-left drawer-primary d-print-none not-initialized" data-region="fixed-drawer" id="theme_moove-drawers-primary" data-preference="" data-state="show-drawer-primary" data-forceopen="0" data-close-on-resize="1">
+    <div class="drawerheader">
+        <button
+            class="btn drawertoggle icon-no-margin hidden"
+            data-toggler="drawers"
+            data-action="closedrawer"
+            data-target="theme_moove-drawers-primary"
+            data-toggle="tooltip"
+            data-placement="right"
+            title="Cerrar caja"
+        >
+            <i class="icon fa fa-times fa-fw " aria-hidden="true"  ></i>
+        </button>
+    </div>
+    <div class="drawercontent drag-container" data-usertour="scroller">
+                <div class="list-group">
+                <a href="https://campus.uax.es/moodle/?redirect=0" class="list-group-item list-group-item-action  " >
+                    Inicio
+                </a>
+                <a href="https://campus.uax.es/moodle/my/" class="list-group-item list-group-item-action  " >
+                    Área personal
+                </a>
+                <a href="https://campus.uax.es/moodle/my/courses.php" class="list-group-item list-group-item-action  " >
+                    Mis asignaturas
+                </a>
+        </div>
+
+    </div>
+</div>
+
+        <div  class="drawer drawer-left  d-print-none not-initialized" data-region="fixed-drawer" id="theme_boost-drawers-courseindex" data-preference="drawer-open-index" data-state="show-drawer-left" data-forceopen="0" data-close-on-resize="0">
+    <div class="drawerheader">
+        <button
+            class="btn drawertoggle icon-no-margin hidden"
+            data-toggler="drawers"
+            data-action="closedrawer"
+            data-target="theme_boost-drawers-courseindex"
+            data-toggle="tooltip"
+            data-placement="right"
+            title="Cerrar el índice de la asignatura"
+        >
+            <i class="icon fa fa-times fa-fw " aria-hidden="true"  ></i>
+        </button>
+    </div>
+    <div class="drawercontent drag-container" data-usertour="scroller">
+                        <nav id="courseindex" class="courseindex">
+    <div id="courseindex-content">
+        <div data-region="loading-placeholder-content" aria-hidden="true" id="course-index-placeholder">
+            <ul class="media-list">
+                <li class="media">
+                    <div class="media-body col-md-6 p-0 d-flex align-items-center">
+                        <div class="bg-pulse-grey rounded-circle mr-2"></div>
+                        <div class="bg-pulse-grey w-100"></div>
+                    </div>
+                </li>
+                <li class="media">
+                    <div class="media-body col-md-6 p-0 d-flex align-items-center">
+                        <div class="bg-pulse-grey rounded-circle mr-2"></div>
+                        <div class="bg-pulse-grey w-100"></div>
+                    </div>
+                </li>
+                <li class="media">
+                    <div class="media-body col-md-6 p-0 d-flex align-items-center">
+                        <div class="bg-pulse-grey rounded-circle mr-2"></div>
+                        <div class="bg-pulse-grey w-100"></div>
+                    </div>
+                </li>
+                <li class="media">
+                    <div class="media-body col-md-6 p-0 d-flex align-items-center">
+                        <div class="bg-pulse-grey rounded-circle mr-2"></div>
+                        <div class="bg-pulse-grey w-100"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    </div>
+</div>
+    <div id="page" data-region="mainpage" data-usertour="scroller" class="drawers   drag-container">
+
+        <header id="page-header" class="moove-container-fluid">
+    <div class="d-flex flex-wrap">
+        <div class="ml-auto d-flex">
+            
+        </div>
+        <div id="course-header">
+            
+        </div>
+    </div>
+    <div class="d-sm-flex align-items-center">
+                <div class="mr-auto">
+                    <div class="page-context-header"><div class="page-header-image mr-2"><div class="content activityiconcontainer modicon_resource"><img class="icon activityicon nofilter" aria-hidden="true" src="https://campus.uax.es/moodle/theme/image.php/moove/core/1727327853/f/text-24" alt="" /></div></div><div class="page-header-headings"><h1 class="h2">Metodos y Funciones</h1></div></div>
+                </div>
+        <div class="header-actions-container ml-auto" data-region="header-actions-container">
+        </div>
+
+            <div class="d-none d-md-block" id="page-navbar">
+                <nav aria-label="Barra de navegación">
+    <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="https://campus.uax.es/moodle/course/view.php?id=14032"  title="Bioinformática [24/25]">Bioinformática [24/25]</a>
+                </li>
+        
+                <li class="breadcrumb-item">
+                    <a href="https://campus.uax.es/moodle/course/view.php?id=14032&amp;section=4"  >UD3. Python y Trabajo Final</a>
+                </li>
+        
+                <li class="breadcrumb-item"><span>Metodos y Funciones</span></li>
+        </ol>
+</nav>
+            </div>
+    </div>
+</header>
+
+        <div id="topofscroll" class="main-inner">
+            <div class="drawer-toggles d-flex">
+                    <div class="drawer-toggler drawer-left-toggle open-nav d-print-none">
+                        <button
+                            class="btn icon-no-margin"
+                            data-toggler="drawers"
+                            data-action="toggle"
+                            data-target="theme_boost-drawers-courseindex"
+                            data-toggle="tooltip"
+                            data-placement="right"
+                            title="Abrir el índice de la asignatura"
+                        >
+                            <span class="sr-only">Abrir el índice de la asignatura</span>
+                            <i class="icon fa fa-list fa-fw " aria-hidden="true"  ></i>
+                        </button>
+                    </div>
+            </div>
+
+            <div id="page-content" class="d-print-block">
+                <div id="region-main-box">
+                    <section id="region-main" aria-label="Contenido">
+
+                        <span class="notifications" id="user-notifications"></span>
+                            <span id="maincontent"></span>
+                            <div class="activity-header" data-for="page-activity-header">
+                                    <span class="sr-only">Requisitos de finalización</span>
+                                    <div data-region="activity-information" data-activityname="Metodos y Funciones" class="activity-information">
+
+            <div class="completion-info" data-region="completion-info">
+                                <button class="btn btn-outline-secondary btn-sm text-nowrap" data-action="toggle-manual-completion" data-toggletype="manual:mark-done" data-cmid="1139423" data-activityname="Metodos y Funciones" data-withavailability="0" title="Marcar Metodos y Funciones como completado" aria-label="Marcar Metodos y Funciones como completado" >
+                                    Marcar como hecha
+                                </button>
+                        
+            </div>
+
+</div>
+</div>
+                        <div role="main"><div class="resourceworkaround">Haga clic en <a href="https://campus.uax.es/moodle/pluginfile.php/2137468/mod_resource/content/1/06-Funciones_Metodos.ipynb" onclick="window.open('https://campus.uax.es/moodle/pluginfile.php/2137468/mod_resource/content/1/06-Funciones_Metodos.ipynb', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false;">06-Funciones_Metodos.ipynb</a> para ver el archivo.</div><div id="format-tiles-js-config"  data-modalAllowedModNames="[&quot;page&quot;,&quot;pdf&quot;,&quot;url&quot;,&quot;html&quot;]" data-modalAllowedCmids="[]" data-defaultcourseicon="pie-chart"></div></div>
+                        
+
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div class="moove-container-fluid p-0 mb-4">
+            <div class="card activity-navigation mdl-bottom">
+    <div class="card-body">
+        <div class="row">
+    <div class="col-md-4">                <div id="prev-activity">
+                        <div class="larrow">
+                            <i class="icon-arrow-left"></i>
+                        </div>
+                        <div class="text">
+                            <span class="nav-guide">
+                                Actividad previa
+                            </span>
+                                <a href="https://campus.uax.es/moodle/mod/resource/view.php?id=1139418&forceview=1" id="prev-activity-link" class="btn btn-link" >Condicionales y bucles</a>
+                        </div>
+                </div>
+</div>
+    <div class="col-md-4">                <div class="mdl-align">
+                    <div class="urlselect">
+    <form method="post" action="https://campus.uax.es/moodle/course/jumpto.php" class="form-inline" id="url_select_f66faac7a40c4f8">
+        <input type="hidden" name="sesskey" value="U40m8DLCVU">
+            <label for="jump-to-activity" class="sr-only">
+                Ir a...
+            </label>
+        <select  id="jump-to-activity" class="custom-select urlselect" name="jump"
+                 >
+                    <option value="" selected>Ir a...</option>
+                    <option value="/mod/resource/view.php?id=1139364&amp;forceview=1" >Introducción a la Bioinformática</option>
+                    <option value="/mod/resource/view.php?id=1139365&amp;forceview=1" >Introducción a la Programación</option>
+                    <option value="/mod/resource/view.php?id=1139366&amp;forceview=1" >Introducción a la Terminal</option>
+                    <option value="/mod/folder/view.php?id=1139369&amp;forceview=1" >ManejoPC-Trucos</option>
+                    <option value="/mod/resource/view.php?id=1139372&amp;forceview=1" >Github</option>
+                    <option value="/mod/assign/view.php?id=1139454&amp;forceview=1" >Subida Enlaces Github</option>
+                    <option value="/mod/resource/view.php?id=1139408&amp;forceview=1" >Instalación y editores</option>
+                    <option value="/mod/folder/view.php?id=1139416&amp;forceview=1" >Estructuras de datos y archivos</option>
+                    <option value="/mod/resource/view.php?id=1139418&amp;forceview=1" >Condicionales y bucles</option>
+                    <option value="/mod/lti/view.php?id=1139374&amp;forceview=1" >Introduction to R Programming for Data Science</option>
+                    <option value="/mod/lti/view.php?id=1139376&amp;forceview=1" >Assessment for Data Analysis and Visualization Foundations</option>
+                    <option value="/mod/lti/view.php?id=1139382&amp;forceview=1" >Prompt Engineering for ChatGPT</option>
+                    <option value="/mod/resource/view.php?id=1139390&amp;forceview=1" >Guía del Estudiante Coursera UAX Skill School</option>
+                    <option value="/mod/resource/view.php?id=1139387&amp;forceview=1" >FAQs Coursera</option>
+                    <option value="/mod/folder/view.php?id=1139436&amp;forceview=1" >P1 y P2</option>
+                    <option value="/mod/assign/view.php?id=1139444&amp;forceview=1" >Entrega P1 y P2</option>
+                    <option value="/mod/folder/view.php?id=1191198&amp;forceview=1" >P1 y P2 Soluciones</option>
+        </select>
+            <noscript>
+                <input type="submit" class="btn btn-secondary ml-1" value="Ir">
+            </noscript>
+    </form>
+</div>
+
+                </div>
+</div>
+    <div class="col-md-4">                <div id="next-activity">
+                        <div class="text">
+                            <span class="nav-guide">
+                                Siguiente actividad
+                            </span>
+                                <a href="https://campus.uax.es/moodle/mod/lti/view.php?id=1139374&forceview=1" id="next-activity-link" class="btn btn-link" >Introduction to R Programming for Data Science</a>
+                        </div>
+                        <div class="rarrow">
+                            <i class="icon-arrow-right"></i>
+                        </div>
+                </div>
+</div>
+</div>
+    </div>
+</div>
+        </div>
+
+        
+        <footer id="page-footer">
+            <div class="moove-container-fluid footer-columns">
+                <div class="row">
+                    <div class="col-md-4 column-left">
+                        <div class="contact">
+                            <h3 class="footer-title">Contáctanos</h3>
+        
+                            <ul>
+                                    <li>
+                                        <a href="https://www.uax.com/" target="_blank" class="website btn btn-link">
+                                            <i class="fa fa-globe"></i>
+                                        </a>
+                                    </li>
+                            </ul>
+                        </div>
+        
+                        <div class="socialnetworks">
+                            <h3 class="footer-title">#HazloEnUAX</h3>
+        
+                            <ul class="mb-0">
+                                    <li>
+                                        <a href="https://www.facebook.com/uaxuniversidad" target="_blank" class="facebook btn btn-link btn-rounded">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+        
+                                    <li>
+                                        <a href="https://twitter.com/uaxuniversidad" target="_blank" class="twitter btn btn-link btn-rounded">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+        
+                                    <li>
+                                        <a href="https://www.linkedin.com/school/universidad-alfonso-x-el-sabio/" target="_blank" class="linkedin btn btn-link btn-rounded">
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </li>
+        
+                                    <li>
+                                        <a href="https://www.youtube.com/user/webmasteruax" target="_blank" class="youtube btn btn-link btn-rounded">
+                                            <i class="fa fa-youtube"></i>
+                                        </a>
+                                    </li>
+        
+                                    <li>
+                                        <a href="https://www.instagram.com/uaxuniversidad/" target="_blank" class="instagram btn btn-link btn-rounded">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+        
+        
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 column-center">
+                            <div class="supportemail"><a href="https://campus.uax.es/moodle/user/contactsitesupport.php" class="btn contactsitesupport btn-outline-info"><i class="icon fa fa-life-ring fa-fw iconhelp icon-pre" aria-hidden="true"  ></i>Soporte técnico</a></div>
+        
+                        <div class="logininfo">Usted se ha identificado como <a href="https://campus.uax.es/moodle/user/profile.php?id=69037" title="Ver perfil">Cristina Velez Álvaro</a> (<a href="https://campus.uax.es/moodle/login/logout.php?sesskey=U40m8DLCVU">Cerrar sesión</a>)</div>
+        
+                        <div class="policiesfooter"><a href="https://campus.uax.es/moodle/admin/tool/policy/viewall.php?returnurl=https%3A%2F%2Fcampus.uax.es%2Fmoodle%2Fmod%2Fresource%2Fview.php%3Fid%3D1139423">Políticas</a></div>
+        
+                        <div class="tool_usertours-resettourcontainer"></div>
+                    </div>
+                    <div class="col-md-4 column-right">
+                    </div>
+                </div>
+            </div>
+        
+            <div class="footer-content-debugging footer-dark bg-dark text-light">
+                <div class="moove-container-fluid footer-dark-inner">
+                    
+                </div>
+            </div>
+        
+            <div data-region="footer-container-popover">
+                <button class="btn btn-icon bg-secondary icon-no-margin btn-footer-popover" data-action="footer-popover" aria-label="Mostrar pie de página">
+                    <i class="icon fa fa-question fa-fw " aria-hidden="true"  ></i>
+                </button>
+            </div>
+            <div class="footer-content-popover container" data-region="footer-content-popover">
+                    <div class="footer-section p-3 border-bottom">
+        
+                    </div>
+                <div class="footer-section p-3">
+                    <div>Desarrollado por <a href="https://moodle.com">Moodle</a></div>
+                </div>
+            </div>
+        
+            <div class="copyright">
+                <div class="madeby">
+                    <p>Este tema fue desarrollado por</p>
+                    <a href="https://conecti.me">
+                        <img src="https://campus.uax.es/moodle/theme/moove/pix/logo_conectime.svg" alt="Conecti.me" style="height: 40px;">
+                    </a>
+                </div>
+            </div>
+        </footer>
+        
+        <script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://campus.uax.es/moodle/lib/requirejs.php/1727327853/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://campus.uax.es/moodle/lib/javascript.php/1727327853/lib/jquery/jquery-3.6.1.min',
+        jqueryui: 'https://campus.uax.es/moodle/lib/javascript.php/1727327853/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://campus.uax.es/moodle/lib/javascript.php/1727327853/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://campus.uax.es/moodle/lib/javascript.php/1727327853/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+M.util.js_pending('core_courseformat/courseeditor'); require(['core_courseformat/courseeditor'], function(amd) {amd.setViewFormat("14032", {"editing":false,"supportscomponents":true,"statekey":"1727689135_1727704048"}); M.util.js_complete('core_courseformat/courseeditor');});;
+
+require(['core_courseformat/local/courseindex/placeholder'], function(component) {
+    component.init('course-index-placeholder');
+});
+;
+
+require(['core_courseformat/local/courseindex/drawer'], function(component) {
+    component.init('courseindex');
+});
+;
+function legacy_activity_onclick_handler_1(e) { e.halt(); window.open('https://campus.uax.es/moodle/mod/resource/view.php?id=1139408&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+function legacy_activity_onclick_handler_2(e) { e.halt(); window.open('https://campus.uax.es/moodle/mod/resource/view.php?id=1139418&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+function legacy_activity_onclick_handler_3(e) { e.halt(); window.open('https://campus.uax.es/moodle/mod/resource/view.php?id=1139420&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+function legacy_activity_onclick_handler_4(e) { e.halt(); window.open('https://campus.uax.es/moodle/mod/resource/view.php?id=1139423&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+
+require(['core_course/manual_completion_toggle'], toggle => {
+    toggle.init()
+});
+;
+M.util.js_pending('core_courseformat/local/content/activity_header'); require(['core_courseformat/local/content/activity_header'], function(amd) {amd.init(); M.util.js_complete('core_courseformat/local/content/activity_header');});;
+
+    require(['theme_moove/accessibilitybar'], function(AccessibilityBar) {
+        AccessibilityBar.init();
+    });
+;
+
+    require(['core/moremenu'], function(moremenu) {
+        moremenu(document.querySelector('#moremenu-66faac7a42888-navbar-nav'));
+    });
+;
+
+require(['jquery', 'message_popup/notification_popover_controller'], function($, Controller) {
+    var container = $('#nav-notification-popover-container');
+    var controller = new Controller(container);
+    controller.registerEventListeners();
+    controller.registerListNavigationEventListeners();
+});
+;
+
+require(['jquery', 'core/popover_region_controller'], function($, controller) {
+    var container = $('#nav-mail-popover-container');
+    var controller = new controller(container);
+    controller.registerListNavigationEventListeners();
+});
+;
+
+    require(['core/usermenu', 'theme_moove/accessibilitysettings'], function(UserMenu, AccessibilitySettings) {
+        UserMenu.init();
+
+        AccessibilitySettings.init();
+    });
+;
+
+require(['theme_boost/drawers']);
+;
+
+require(['theme_boost/drawers']);
+;
+
+        require(['jquery', 'core/custom_interaction_events'], function($, CustomEvents) {
+            CustomEvents.define('#jump-to-activity', [CustomEvents.events.accessibleChange]);
+            $('#jump-to-activity').on(CustomEvents.events.accessibleChange, function() {
+                if ($(this).val()) {
+                    $('#url_select_f66faac7a40c4f8').submit();
+                }
+            });
+        });
+    ;
+
+    require(['theme_boost/footer-popover'], function(FooterPopover) {
+        FooterPopover.init();
+    });
+;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader', 'theme_boost/drawer'], function(Loader, Drawer) {
+    Drawer.init();
+    M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('format_tiles/course_mod_modal'); require(['format_tiles/course_mod_modal'], function(amd) {amd.init("14032", false, "mod-resource-view", null, true); M.util.js_complete('format_tiles/course_mod_modal');});;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(2137468, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(1727704048); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","ok":"OK","cancel":"Cancelar","confirm":"Confirmar","areyousure":"\u00bfEst\u00e1 seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido","file":"Archivo","url":"URL","collapseall":"Colapsar todo","expandall":"Expandir todo"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando","fileexistsdialog_filemanager":"Ya ha sido anexado un archivo con ese nombre","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} enlaces a este archivo","select":"Seleccionar"},"admin":{"confirmdeletecomments":"Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?","confirmation":"Confirmaci\u00f3n"},"debug":{"debuginfo":"Informaci\u00f3n de depuraci\u00f3n","line":"L\u00ednea","stacktrace":"Trazado de la pila (stack)"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"es"});
+});
+Y.use("moodle-filter_glossary-autolinker",function() {M.filter_glossary.init_filter_autolinking({"courseid":0});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random66faac7a40c4f9'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random66faac7a40c4f9'); });
+})();
+//]]>
+</script>
+
+        
+    </div>
+    
+</div>
+
+</body>
+</html>
